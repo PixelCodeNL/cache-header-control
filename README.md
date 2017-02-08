@@ -6,24 +6,10 @@ This plugin makes it easier to set up an Cache-Control and Expiration HTTP heade
 
 ## Installation
 
-Add the repository to your composer.json file:
+Install it with Composer:
 
 ```
-"repositories": [
-    ...
-    {
-        "type": "vcs",
-        "url": "git@github.com:PixelCodeNL/cache-header-control.git"
-    }
-]
-```
-
-Add the plugin to composer.json:
-```
-"require": {
-    ...
-    "pixelcode/cacheheadercontrol": "^1.0.0"
-}
+composer require pixelcode/cacheheadercontrol
 ```
 
 ## Usage
