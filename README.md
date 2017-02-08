@@ -2,12 +2,29 @@
 
 This plugin makes it easier to set up an Cache-Control and Expiration HTTP header from your templates.
 
-## Usage
+## Installation
 
-Install the plugin with composer:
+Add the repository to your composer.json file:
+
 ```
-composer require pixelcode/cache-header-control
+"repositories": [
+    ...
+    {
+        "type": "vcs",
+        "url": "git@github.com:PixelCodeNL/cache-header-control.git"
+    }
+]
 ```
+
+Add the plugin to composer.json:
+```
+"require": {
+    ...
+    "pixelcode/cacheheadercontrol": "^1.0.0"
+}
+```
+
+## Usage
 
 Use it in your template(s):
 
@@ -33,11 +50,11 @@ You can use all 'strtotime' formats here, see http://php.net/manual/en/function.
 
 ## Configuration
 
-### Options 
+### Options
 
 #### enableCache
 
-Default: `false`
+Default: `true`
 
 Enable or disable cache headers. If this is set to 'false' and you add the 'http_cache' tag to a template, the Expiration header will get the value of {time} - 1 second.
 
@@ -52,7 +69,7 @@ Default expiration used when you use '{% http_cache %}' without any custom optio
 ### Overwrite configuration
 
 You can overwrite the configuration by creating a PHP file with the name 'cacheHeaderControl.php' in the 'craft/config' folder.
- 
+
 Example:
 
 ```
@@ -63,15 +80,14 @@ return [
         'enableCache' => true,
         'defaultCacheExpiration' => '+15 minutes',
     ],
-    
+
     'project.dev' => [
         'enableCache' => false,
     ],
-    
+
     'production-url.com' => [
         'defaultCacheExpiration' => '+1 hour',
     ]
 ];
 
 ```
-
