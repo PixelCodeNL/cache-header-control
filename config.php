@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'enableCache' => false,
+    'enableCache' => true,
     'defaultCacheExpiration' => '+15 minutes'
 ];
