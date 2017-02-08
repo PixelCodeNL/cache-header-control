@@ -1,0 +1,28 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.5/phpunit.xsd"
+        bootstrap="tests/bootstrap.php"
+>
+    <testsuites>
+        <testsuite name="Cache header control tests">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">.</directory>
+            <exclude>
+                <directory suffix=".php">tests</directory>
+                <directory suffix=".php">vendor</directory>
+                <file>CacheHeaderControlPlugin.php</file>
+                <file>config.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" target="coverage/html" />
+        <log type="coverage-clover" target="coverage/coverage.xml"/>
+    </logging>
+</phpunit>
