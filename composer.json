@@ -1,5 +1,5 @@
 {
-    "name": "pixelcode/cache-header-control",
+    "name": "pixelcode/cacheheadercontrol",
     "license": "MIT",
     "description": "Craft plugin for setting HTTP cache control headers",
     "type": "craft-plugin"
