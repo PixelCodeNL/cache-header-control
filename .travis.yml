@@ -5,3 +5,8 @@ php:
   - '5.6'
   - '7.0'
   - '7.1'
+
+install: composer install --no-interaction --no-progress
+
+script:
+  - phpunit
