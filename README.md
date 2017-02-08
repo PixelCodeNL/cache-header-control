@@ -46,8 +46,6 @@ This will set the cache expiration to 5 minutes after the current time, so the t
 
 You can use all 'strtotime' formats here, see http://php.net/manual/en/function.strtotime.php.
 
-
-
 ## Configuration
 
 ### Options
@@ -58,13 +56,11 @@ Default: `true`
 
 Enable or disable cache headers. If this is set to 'false' and you add the 'http_cache' tag to a template, the Expiration header will get the value of {time} - 1 second.
 
-
 #### defaultCacheExpiration
 
 Default: `+15 minutes`
 
 Default expiration used when you use '{% http_cache %}' without any custom options.
-
 
 ### Overwrite configuration
 
@@ -91,3 +87,10 @@ return [
 ];
 
 ```
+
+## Troubeshooting
+
+### Craft template cache
+
+Because the plugin is using a Twig tag, it will also be cached with Craft template cache (if you have enabled template cache).
+So if you're using for example '{% http_cache %}' and you have enabled template cache for 2 hours, any configuration changes in the plugin will be used after 2 hours.
