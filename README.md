@@ -1,5 +1,7 @@
 # Craft HTTP cache header control plugin
 
+[![Build Status](https://travis-ci.org/PixelCodeNL/cache-header-control.svg?branch=master)](https://travis-ci.org/PixelCodeNL/cache-header-control)
+
 This plugin makes it easier to set up an Cache-Control and Expiration HTTP header from your templates.
 
 ## Installation
