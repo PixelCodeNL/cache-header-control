@@ -68,24 +68,13 @@ Default expiration used when you use '{% http_cache %}' without any custom optio
 
 You can overwrite the configuration by creating a PHP file with the name 'cacheHeaderControl.php' in the 'craft/config' folder.
 
-Example:
+Example for overwriting the default expiration:
 
 ```
 <?php
 
 return [
-    '*' => [
-        'enableCache' => true,
-        'defaultCacheExpiration' => '+15 minutes',
-    ],
-
-    'project.dev' => [
-        'enableCache' => false,
-    ],
-
-    'production-url.com' => [
-        'defaultCacheExpiration' => '+1 hour',
-    ]
+    'defaultCacheExpiration' => '+5 minutes',
 ];
 
 ```
