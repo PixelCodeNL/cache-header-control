@@ -12,7 +12,7 @@ class HttpCacheNode extends \Twig_Node
         $expiration = $this->getAttribute('expiration');
 
         if ($expiration) {
-            HeaderHelper::setExpires($expiration);
+            $compiler->write('\Craft\HeaderHelper::setExpires(' . $expiration . ');');
         }
     }
 }

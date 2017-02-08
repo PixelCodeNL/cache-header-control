@@ -87,10 +87,3 @@ return [
 ];
 
 ```
-
-## Troubeshooting
-
-### Craft template cache
-
-Because the plugin is using a Twig tag, it will also be cached with Craft template cache (if you have enabled template cache).
-So if you're using for example '{% http_cache %}' and you have enabled template cache for 2 hours, any configuration changes in the plugin will be used after 2 hours.
