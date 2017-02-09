@@ -8,3 +8,4 @@ install: composer install --no-interaction --no-progress
 
 script:
   - php vendor/bin/phpunit
+  - php vendor/bin/test-reporter --coverage-report=coverage/coverage.xml
