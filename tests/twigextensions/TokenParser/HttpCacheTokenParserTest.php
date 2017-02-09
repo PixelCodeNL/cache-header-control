@@ -167,11 +167,10 @@ class HttpCacheTokenParserTest extends BaseTestCase
     public function getTimeToExpirationData()
     {
         return [
+            ['+5 minutes', 300],
             ['+1 hour', 3600],
+            ['+2 hours', 7200],
             ['+1 minute', 60],
-            ['+2 years', 63072000],
-            ['+1 month', 2419200],
-            ['+2 months', 5094000],
             ['+1 day', 86400],
             ['+10 days', 864000],
         ];
